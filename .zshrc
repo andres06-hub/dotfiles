@@ -113,8 +113,4 @@ source $ZSH/oh-my-zsh.sh
 . ~/.asdf/plugins/java/set-java-home.zsh
 
 # --> Aliases
-alias vzsh = 'nvim ~/.zshrc'
-
-# git Aliases
-alias gs = 'git status'
-
+[[ -f ~/.aliases ]] && source ~/.aliases
