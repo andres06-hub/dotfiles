@@ -13,14 +13,14 @@ export ZSH="$HOME/.oh-my-zsh"
 #ZSH_THEME="norm"
 ZSH_THEME="miloshadzic"
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+# Auto corrections
+ENABLE_CORRECTION="false"
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+# Editot
+export EDITOR='nvim'
+
+# Fix the Java Problem
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -34,28 +34,6 @@ ZSH_THEME="miloshadzic"
 # Uncomment the following line to change how often to auto-update (in days).
 # zstyle ':omz:update' frequency 13
 
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -63,7 +41,7 @@ ZSH_THEME="miloshadzic"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -73,44 +51,43 @@ ZSH_THEME="miloshadzic"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-#plugins=(git)
-puglins=(
+plugins=(
     git
     zsh-autosuggestions
     zsh-syntax-highlighting
+    zsh-navigation-tools
     sudo
+    vscode
+    python
+    npm
+    history
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# Find files ^w
+alias findd="ls ~/ | grep $1"
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+# ASDF Completions
+fpath=(${ASDF_DIR}/completions $fpath)
+autoload -Uz compinit && compinit
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-. "$HOME/.asdf/asdf.sh"
-# asdf : Plugins
-. ~/.asdf/plugins/java/set-java-home.zsh
-
+# ASDF Configurations
+. "$HOME/.asdf/asdf.sh" # ASDF
+. "$HOME/.asdf/plugins/java/set-java-home.zsh" # Java
 # --> Aliases
-[[ -f ~/.aliases ]] && source ~/.aliases
+[[ -f ~/data/dotfile/.aliases ]] && source ~/data/dotfile/.aliases
+
+# fzf : Es un buscador difuso de línea de comandos de propósito general.
+# Es un filtro interactivo de Unix para la línea de comandos que se puede usar con cualquier lista; archivos, historial de comandos, procesos, nombres de host, marcadores, confirmaciones de git, etc.
+[[ -f ~/data/dotfile/.fzf.zsh ]] && source ~/data/dotfile/.fzf.zsh
+
+# BAT
+export BAT_THEME="TwoDark"
