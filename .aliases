@@ -1,0 +1,11 @@
+function aliases(){
+    nvim ~/data/dotfile/.aliases 
+}
+
+function rfsh(){
+    source ~/.zshrc
+}
+
+function v() {
+    nvim "$@"
+}
