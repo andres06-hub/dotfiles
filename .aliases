@@ -2,7 +2,7 @@ function aliases(){
     nvim ~/data/dotfile/.aliases 
 }
 
-function rfsh(){
+function rsh(){
     source ~/.zshrc
 }
 
