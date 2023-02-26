@@ -16,5 +16,5 @@ alias fv="fzf --print0 | xargs -0 -o nvim"
 alias ft="fzf-tmux"
 
 # Style
-export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+export FZF_DEFAULT_OPTS="--height=40% --layout=reverse --info=inline --border --margin=1 --padding=1"
 
