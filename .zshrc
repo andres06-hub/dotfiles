@@ -4,10 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# Themes
 #zsH_THEME="robbyrussell"
 #ZSH_THEME="agnoster"
 #ZSH_THEME="norm"
@@ -22,10 +19,6 @@ export EDITOR='nvim'
 # Fix the Java Problem
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
 # zstyle ':omz:update' mode auto      # update automatically without asking
@@ -34,17 +27,11 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # Uncomment the following line to change how often to auto-update (in days).
 # zstyle ':omz:update' frequency 13
 
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
 # You can set one of the optional three formats:
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+HIST_STAMPS="mm/dd/yyyy/HHHH:MMMM:SSSS"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -53,6 +40,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
+    z
     zsh-autosuggestions
     zsh-syntax-highlighting
     zsh-navigation-tools
@@ -62,12 +50,10 @@ plugins=(
     npm
     history
     archlinux
+    web-search
 )
 
 source $ZSH/oh-my-zsh.sh
-
-# Find files ^w
-alias findd="ls ~/ | grep $1"
 
 # User configuration
 
@@ -85,6 +71,9 @@ autoload -Uz compinit && compinit
 . "$HOME/.asdf/plugins/java/set-java-home.zsh" # Java
 # --> Aliases
 [[ -f ~/data/dotfile/.aliases ]] && source ~/data/dotfile/.aliases
+alias copy.="xclip -sel c"
+# Find files
+alias findd="ls ~/ | grep $1"
 
 # fzf : Es un buscador difuso de línea de comandos de propósito general.
 # Es un filtro interactivo de Unix para la línea de comandos que se puede usar con cualquier lista; archivos, historial de comandos, procesos, nombres de host, marcadores, confirmaciones de git, etc.
@@ -92,3 +81,5 @@ autoload -Uz compinit && compinit
 
 # BAT
 export BAT_THEME="TwoDark"
+
+# Web-Search : https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search
