@@ -3,9 +3,13 @@ function aliases(){
 }
 
 function rsh(){
-    source ~/.zshrc
+    source ~/data/dotfile/.zshrc
 }
 
 function v() {
     nvim "$@"
+}
+
+batdiff() {
+    git diff --name-only --relative --diff-filter=d | xargs bat --diff
 }
