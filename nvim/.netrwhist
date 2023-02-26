@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/as_dev/data/dotfile'
+let g:netrw_dirhist_4='/home/as_dev/data/dotfile/nvim/lua/core'
+let g:netrw_dirhist_3='/home/as_dev/data/dotfile/nvim'
+let g:netrw_dirhist_2='/home/as_dev/data/dotfile/nvim/lua'
+let g:netrw_dirhist_1='/home/as_dev/data/dotfile/nvim'
