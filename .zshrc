@@ -61,6 +61,7 @@ plugins=(
     python
     npm
     history
+    archlinux
 )
 
 source $ZSH/oh-my-zsh.sh
