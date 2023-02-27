@@ -1,4 +1,7 @@
 local options = {
+  -- Encoding
+  encoding = 'utf-8',
+
   -- Line numbers
   relativenumber = true,
 
@@ -25,6 +28,10 @@ local options = {
 
   -- To avoid performance issues, I never fold anything  
   -- foldmethod = manual
+
+  -- Cursor
+  cursorline = true,
+  termguicolors = true,
 
 }
 
