@@ -29,10 +29,17 @@ return require('packer').startup(function(use)
     use 'navarasu/onedark.nvim' -- One Dark Theme
 
     use {
-        'nvim-telescope/telescope.nvim', -- Search files
-        requires = { {'nvim-lua/plenary.nvim'} } -- Easy functions writting
-   }
+      'nvim-telescope/telescope.nvim', -- Search files
+      requires = { {'nvim-lua/plenary.nvim'} } -- Easy functions writting
+    }
+
+    use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
+
    if packer_bootstrap then
 	require('packer').sync()
     end
+
 end)
