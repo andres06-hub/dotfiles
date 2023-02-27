@@ -13,14 +13,15 @@ fi
 source "/home/as_dev/.fzf/shell/key-bindings.zsh"
 
 # Open whit vim
-N="0"
-XV="xargs -$N -o nvim"
+alias N="0"
+alias XV="xargs -$N -o nvim"
 
 #Config bat : styles
 alias sbat="'bat -n --color=always {}'"
 
 # Aliases
-alias fv="fzf --preview $sbat --print$N | $XV"
+#alias fv="fzf --preview $sbat --print$N | $XV"
+alias fv="fzf --preview 'bat -n --color=always {}' --print0 | xargs -0 -o nvim"
 alias ft="fzf-tmux | xclip -sel c"
 
 # Style
