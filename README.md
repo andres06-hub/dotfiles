@@ -7,7 +7,7 @@ In this repository you will find the configuration files
   <img src="https://raw.githubusercontent.com/neovim/neovim.github.io/master/logos/neovim-logo-300x87.png" alt="Neovim">
 </h1>
 
-NVIM: [See how](https://github.com/wbthomason/packer.nvim#quickstart)
+- Install wbthomason/packer.nvim. [See how](https://github.com/wbthomason/packer.nvim#quickstart)
 
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 <hr>
