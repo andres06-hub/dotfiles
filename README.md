@@ -17,8 +17,9 @@ In this repository you will find the configuration files
 ```
 /$HOME/.config
 ```
-<hr>
+
 ### Pluggins
+<hr>
 
 | Pluggins         | Description                                          | link |
 |------------------|------------------------------------------------------|------|
