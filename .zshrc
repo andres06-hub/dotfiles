@@ -31,7 +31,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-HIST_STAMPS="mm/dd/yyyy/HHHH:MMMM:SSSS"
+HIST_STAMPS="mm/dd/yyyy"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -83,3 +83,7 @@ alias findd="ls ~/ | grep $1"
 export BAT_THEME="TwoDark"
 
 # Web-Search : https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
