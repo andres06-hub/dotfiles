@@ -27,6 +27,15 @@ return require('packer').startup(function(use)
     use('wbthomason/packer.nvim')
     -- colorscheme
     use 'navarasu/onedark.nvim' -- One Dark Theme
+    use 'nvim-tree/nvim-tree.lua' -- File explorer
+    use 'kyazdani42/nvim-web-devicons' -- Icons
+    use 'nanozuki/tabby.nvim' -- Better tabs
+    use 'hrsh7th/nvim-cmp' -- completion plugin
+    use 'saadparwaiz1/cmp_luasnip' -- for autocompletion
+    use 'hrsh7th/cmp-path' -- source for file system paths
+    use 'navarasu/onedark.nvim' -- One Dark Theme
+    use 'onsails/lspkind.nvim' -- Autocompletion
+    use 'windwp/nvim-autopairs' -- autoclose parens, brackets, quotes, etc...
 
     use {
       'nvim-telescope/telescope.nvim', -- Search files
@@ -36,6 +45,13 @@ return require('packer').startup(function(use)
     use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
+
+    -- LSP config
+    use {
+        'williamboman/mason.nvim', -- Servers Manager
+        'williamboman/mason-lspconfig.nvim', -- Lsp configuration bridge
+        'neovim/nvim-lspconfig', -- Nvim lsp configuration
     }
 
    if packer_bootstrap then
