@@ -15,6 +15,9 @@ keymap.set('n', 'dw', 'vb"_d')
 -- Select all 
 keymap.set('n', '<C-a>', 'gg<S-v>G') -- Ctrl + a
 
+-- Telescope
+keymap.set('n', '<leader>p', ':Telescope find_files<CR>')
+
 -- New tab 
 keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
 

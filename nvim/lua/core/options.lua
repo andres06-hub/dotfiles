@@ -31,8 +31,6 @@ local options = {
 
   -- Cursor
   cursorline = true,
-  termguicolors = true,
-
 }
 
 local opt = vim.opt
