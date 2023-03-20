@@ -71,8 +71,7 @@ autoload -Uz compinit && compinit
 . "$HOME/.asdf/plugins/java/set-java-home.zsh" # Java
 # --> Aliases
 [[ -f ~/data/dotfile/.aliases ]] && source ~/data/dotfile/.aliases
-alias copy.="xclip -sel c"
-# Find files
+# Find file
 alias findd="ls ~/ | grep $1"
 
 # fzf : Es un buscador difuso de línea de comandos de propósito general.
