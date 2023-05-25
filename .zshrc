@@ -55,9 +55,18 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# direnv
+#eval $(direnv hook zsh)
+#export PATH=$PATH:/home/as_dev/.config/direnv
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+
+# GOLANG
+export PATH=$PATH:/home/as_dev/.asdf/installs/golang/1.20.3/go/bin
+export GOPATH=$HOME/.asdf/installs/golang/1.20.3/go/bin
+
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
@@ -83,6 +92,7 @@ export BAT_THEME="TwoDark"
 
 # Web-Search : https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search
 
+source ~/.zsh_profile
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
