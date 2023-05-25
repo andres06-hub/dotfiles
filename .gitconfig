@@ -1,7 +1,7 @@
 [user]
 	email = andressierrarojas7@gmail.com
 	name = andres06-hub
-	signingkey = A250E5F2849B64681F0E1853FE4EC417D2B1ACCB
+  signingkey = A250E5F2849B64681F0E1853FE4EC417D2B1ACCB
 
 
 # DOC - Delta: https://github.com/dandavison/delta?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=es-419
@@ -117,4 +117,6 @@
 [diff]
     colorMoved = default
 [credential]
-	helper = store
+	helper = cache
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
