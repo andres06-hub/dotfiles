@@ -94,5 +94,11 @@ export BAT_THEME="TwoDark"
 
 source ~/.zsh_profile
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
+
+# pnpm
+export PNPM_HOME="/home/as_dev/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

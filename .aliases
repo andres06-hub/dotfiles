@@ -2,6 +2,10 @@ function aliases(){
     nvim ~/data/dotfile/.aliases 
 }
 
+function sysmonitor(){
+  vtop
+}
+
 function rsh(){
     source ~/data/dotfile/.zshrc
 }
