@@ -5,10 +5,21 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # Themes
-#zsH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+#ZSH_THEME="sporty_256"
+#ZSH_THEME="sorin"
+#ZSH_THEME="mrtazz"
+#ZSH_THEME="mgutz"
+#ZSH_THEME="kolo"
+#ZSH_THEME="kennethreitz"
+#ZSH_THEME="juanghurtado"
+#ZSH_THEME="jnrowe"
+#ZSH_THEME="half-life"
+#ZSH_THEME="garyblessington"
+ZSH_THEME="fwalch"
 #ZSH_THEME="agnoster"
 #ZSH_THEME="norm"
-ZSH_THEME="miloshadzic"
+#ZSH_THEME="miloshadzic"
 
 # Auto corrections
 ENABLE_CORRECTION="false"
@@ -51,7 +62,19 @@ plugins=(
     history
     archlinux
     web-search
+    kubectl
+    httpie
+    direnv
 )
+
+alias ll='lsd -lh --group-dirs=first'
+alias la='lsd -a --group-dirs=first'
+alias l='lsd --group-dirs=first'
+alias lla='lsd -lha --group-dirs=first'
+alias ls='lsd --group-dirs=first'
+alias cat='/usr/bin/bat --paging=never'
+alias catnl='bat'
+alias icat='kitty +kitten icat'
 
 source $ZSH/oh-my-zsh.sh
 
