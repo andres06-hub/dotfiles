@@ -21,3 +21,4 @@ batdiff() {
 copyp() {
   pwd | xclip -sel c
 }
+
